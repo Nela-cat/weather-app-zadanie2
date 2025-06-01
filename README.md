@@ -57,6 +57,7 @@ Ze względu na konieczność potwierdzenia poprawnego działania pipeline'u oraz
 Obraz został zbudowany i opublikowany poprawnie.
 Mechanizm skanowania może zostać ponownie aktywowany przez przywrócenie odpowiedniego kroku w pliku workflow:
 
+```bash
 - name: Scan image with Trivy
   uses: aquasecurity/trivy-action@master
   with:
@@ -64,7 +65,7 @@ Mechanizm skanowania może zostać ponownie aktywowany przez przywrócenie odpow
     format: table
     severity: CRITICAL,HIGH
     exit-code: 1
-
+```
 
 
 Tagowanie obrazów
