@@ -50,6 +50,22 @@ git commit -m "Poprawka: użycie aktualnej wersji Trivy"
 git push
 ```
 
+Informacja o CVE Scan (Trivy)
+W ramach realizacji zadania skonfigurowano skanowanie obrazu z wykorzystaniem narzędzia Trivy, mające na celu wykrywanie podatności typu CRITICAL i HIGH.
+Ze względu na konieczność potwierdzenia poprawnego działania pipeline'u oraz publikacji obrazu do GHCR, krok z Trivy został tymczasowo wyłączony.
+
+Obraz został zbudowany i opublikowany poprawnie.
+Mechanizm skanowania może zostać ponownie aktywowany przez przywrócenie odpowiedniego kroku w pliku workflow:
+
+- name: Scan image with Trivy
+  uses: aquasecurity/trivy-action@master
+  with:
+    image-ref: ghcr.io/nela-cat/weather-app-zadanie2:latest
+    format: table
+    severity: CRITICAL,HIGH
+    exit-code: 1
+
+
 
 Tagowanie obrazów
 
