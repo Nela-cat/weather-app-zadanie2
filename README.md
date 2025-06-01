@@ -56,6 +56,8 @@ Tagowanie obrazów
 - `ghcr.io/nela-cat/weather-app-zadanie2:latest` – główny obraz multiarch
 - `nelacot/weather-cache:latest` – warstwa cache zapisywana do DockerHub
 
+Łańcuch GitHub Actions został pomyślnie uruchomiony i zakończony bez błędów.
+Zbudowany obraz został opublikowany na GHCR.
 
 Linki
 
