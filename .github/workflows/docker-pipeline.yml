@@ -39,6 +39,7 @@ jobs:
         context: .
         push: true
         platforms: linux/amd64,linux/arm64
-        tags: ghcr.io/${{ github.repository_owner }}/weather-app-zadanie2:latest
+        tags: ghcr.io/nela-cat/weather-app-zadanie2:latest
+
         cache-from: type=registry,ref=${{ secrets.DOCKERHUB_USERNAME }}/weather-cache:latest
         cache-to: type=registry,ref=${{ secrets.DOCKERHUB_USERNAME }}/weather-cache:latest,mode=max
